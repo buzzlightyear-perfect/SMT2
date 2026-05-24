@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan4</title>
+
+    <style type="text/css">
+        #kotak{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $(".mulai").click(function(){
+        $("#kotak").animate({left:300},"slow")
+        });
+    });
+
+</script>
+</head>
+<body>
+
+    <input type="submit" class="mulai" value="Jalankan" />
+    <div id="kotak"></div>
+
+</body>
+</html>

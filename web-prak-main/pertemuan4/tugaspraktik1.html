@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    body {
+        background-image: url('https://www.amny.com/wp-content/uploads/2025/07/enzo-maresca-chelsea-cwc-final.jpg?quality=51');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .button2 {
+        background-color: goldenrod;
+        display: flex;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 20px;
+
+    }
+    
+
+    .atas {
+        background-color: blue;
+        width: 97%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 5px;
+        gap: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .pinggir {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tultengah {
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+    
+</style>
+<body>
+    
+    <nav class="atas">
+        <div>
+            <img style="height: 60px;" src="https://upload.wikimedia.org/wikipedia/id/thumb/c/cc/Chelsea_FC.svg/250px-Chelsea_FC.svg.png">
+        </div>
+        <div class="tultengah">
+            <p>Keep The Blue Flag Flying High</p>
+        </div>
+        <div class="pinggir">
+            <div>
+                <button class="button2">Contact</button>
+            </div>
+            <div>
+                <button class="button2">Information</button>
+            </div>
+            <div>
+                <button class="button2">Service</button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="login" style="height: 90vh; margin: auto; justify-content: center; width: 100%; display: flex; align-items: center;">
+        <form action="tugaspraktik2.html" style="display: flex; flex-direction: column; gap: 10px; background-color: blue; padding: 20px; border-radius: 10px;">
+            <input placeholder="Email" type="email" required>
+            <input placeholder="Password" type="password" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="submit" value="Log in" style="background-color: goldenrod; color: black; border: none; border-radius: 20px; padding: 10px; cursor: pointer;">
+        </form>
+    </section>
+</body>
+</html>

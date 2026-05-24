@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelsea</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url(https://wallpaperaccess.com/full/1660864.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        .atas {
+            background-color: blue;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .atas img {
+            height: 60px;
+        }
+
+        .tultengah {
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        color: goldenrod;
+        font-size: 20px;
+        }
+
+        .kanankiri {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            margin-top: 120px; 
+        }
+
+        .kotak {
+            background: goldenrod;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .kotak h2, .kotak h4 {
+            text-align: center;
+        }
+
+        .kotak p {
+            text-align: justify;
+        }
+
+        .button {
+        background-color: goldenrod;
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    
+    <section class="atas">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://upload.wikimedia.org/wikipedia/id/thumb/c/cc/Chelsea_FC.svg/250px-Chelsea_FC.svg.png" alt="Chelsea Logo">
+            <p class="tultengah">Keep The Blue Flag Flying High</p>
+        </div>
+    </section>
+
+    <section class="kanankiri">
+        <div class="kotak">
+            <h2>Sejarah Singkat</h2>
+            <p>Chelsea FC didirikan pada 10 Maret 1905 oleh Henry Augustus Mears 
+            dan bermarkas di Stamford Bridge, London. Klub berjuluk "The Blues" ini 
+            meraih gelar Liga Inggris pertama pada 1955, Piala FA pertama pada 1970, 
+            dan Piala Winners Eropa pada 1971. Era kejayaan datang di bawah Roman 
+            Abramovich dengan 5 gelar Premier League dan 2 Liga Champions (2012, 2021). 
+            Pada era Todd Boehly, Chelsea menjuarai Piala Dunia Antarklub 2025 dan 
+            terus bersaing di level tertinggi sepak bola dunia.</p>
+        </div>
+
+        <div class="kotak">
+            <h2>Jadwal Pertandingan</h2>
+            <h4>Premier League</h4>
+            <ul>
+                <li>Chelsea vs Man United - 19 April 2026</li>
+                <li>Chelsea vs Brighton - 26 April 2026</li>
+                <li>Chelsea vs Nottm Forest - 4 Mei 2026</li>
+                <li>Chelsea vs Liverpool - 9 Mei 2026</li>
+            </ul>
+            <h4>FA Cup</h4>
+            <ul>
+                <li>Chelsea vs Leeds United - 26 April 2026</li>
+            </ul>
+        </div>
+
+        <div class="kotak">
+            <h2>Berita Terbaru</h2>
+            <ul>
+                <li>Chelsea bersiap menghadapi laga krusial melawan Manchester United pada 19 April 2026 di Stamford Bridge.</li>
+                <li>Michael Olise hampir bergabung dengan Chelsea dengan nilai transfer £45 juta.</li>
+                <li>Moises Caicedo resmi menandatangani kontrak baru hingga tahun 2033.</li>
+                <li>Cole Palmer menegaskan tetap setia di Chelsea dan membantah rumor pindah ke Manchester United.</li>
+                <li>Isu pemecatan Enzo Maresca masih jadi sorotan, dengan pemilik klub berjanji memperbaiki kebijakan transfer.</li>
+            </ul>
+        </div>
+    </section>
+    <form action="tugaspraktik1.html" style="display: flex; justify-content: center; gap: 10px;">
+        <input type="submit" value="Logout" class="button">
+    </form>
+</body>
+</html>

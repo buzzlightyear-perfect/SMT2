@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Makefile",
+            "type": "shell",
+            "command": "mingw32-make",
+            "args": ["all"],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Run Makefile Debug",
+            "type": "shell",
+            "command": "mingw32-make",
+            "args": ["debug_build"],
+            "group": "build"
+        },
+        {
+            "label": "Run Makefile Linux",
+            "type": "shell",
+            "command": "make",
+            "args": ["all"],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Run Makefile Linux Debug",
+            "type": "shell",
+            "command": "make",
+            "args": ["debug_build"],
+            "group": "build"
+        },
+        {
+            "label": "Clean Program Linux",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "group": "build"
+        },
+        {
+            "label": "Clean Program",
+            "type": "shell",
+            "command": "mingw32-make",
+            "args": ["clean"],
+            "group": "build"
+        }
+    ]
+}
