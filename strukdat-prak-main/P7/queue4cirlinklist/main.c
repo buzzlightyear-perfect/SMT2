@@ -5,6 +5,7 @@
 
 #include "queue.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     Queue Q;
@@ -15,6 +16,8 @@ int main() {
     address pos;
 
     do {
+        system("cls");
+
         printf("\n=== MENU QUEUE CIRCULAR LINKED LIST ===\n");
         printf("1. Enqueue (AddQueue)\n");
         printf("2. Dequeue (DelQueue)\n");
@@ -37,6 +40,7 @@ int main() {
                 if (!IsQueuekEmpty(Q)) {
                     DelQueue(&Q, &val);
                     printf(">> %d berhasil dihapus dari queue.\n", val);
+                    PrintQueueInfo(Q);
                 } else {
                     printf("Queue kosong, tidak bisa dequeue.\n");
                 }
@@ -68,6 +72,10 @@ int main() {
             default:
                 printf("Pilihan tidak valid.\n");
         }
+
+        printf("\nTekan ENTER untuk lanjut...");
+        getchar();  
+        getchar(); 
     } while (pilihan != 6);
 
     return 0;

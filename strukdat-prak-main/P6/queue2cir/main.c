@@ -26,7 +26,8 @@ int main() {
             case 2:
                 if (!IsQueuekEmpty(Q)) {
                     DelQueue(&Q, &x);
-                    printf("Antrian dihapus bos: %d\n", x);
+                    printf("Antrian dihapus bos\n", x);
+                    PrintQueueInfo(Q);
                 } else {
                     DelQueue(&Q, &x);
                 }
