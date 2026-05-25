@@ -1,7 +1,6 @@
 /* Program : main.c
    Author  : Bhaskoro Prayoga Utomo
-   Kelas   : E
-   Deskripsi: Program utama untuk menguji queue circular linked list
+   Kelas   : E - 2550081109
 */
 
 #include "queue.h"

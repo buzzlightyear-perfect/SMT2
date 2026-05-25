@@ -1,35 +1,29 @@
 /* Program : queue.c
    Author  : Bhaskoro Prayoga Utomo
-   Kelas   : E
-   Deskripsi: Implementasi queue menggunakan circular linked list
+   Kelas   : E - 255081109
 */
 
 #include "queue.h"
 #include <stdlib.h>
 
-/* Membuat queue kosong */
 void CreateQueue(Queue *Q) {
     Head(*Q) = Nil;
     Tail(*Q) = Nil;
     Q->counter = 0;
 }
 
-/* Mengecek apakah queue kosong */
 boolean IsQueuekEmpty(Queue Q) {
     return (Head(Q) == Nil);
 }
 
-/* Mengecek apakah queue penuh (untuk linked list circular tidak terbatas kecuali memori habis) */
 boolean IsQueuekFull(Queue Q) {
     return false;
 }
 
-/* Menghitung jumlah elemen queue */
 int NBElmt(Queue Q) {
     return Q.counter;
 }
 
-/* Menambahkan elemen ke queue (enqueue) */
 void AddQueue(Queue *Q, infotype X) {
     address P = (address) malloc(sizeof(ElmStack));
     if (P != Nil) {
@@ -47,7 +41,6 @@ void AddQueue(Queue *Q, infotype X) {
     }
 }
 
-/* Menghapus elemen dari queue (dequeue) */
 void DelQueue(Queue *Q, infotype *X) {
     if (!IsQueuekEmpty(*Q)) {
         address P = Head(*Q);
@@ -58,14 +51,13 @@ void DelQueue(Queue *Q, infotype *X) {
             Tail(*Q) = Nil;
         } else {
             Head(*Q) = Head(*Q)->next;
-            Tail(*Q)->next = Head(*Q); // tetap circular
+            Tail(*Q)->next = Head(*Q);
         }
         free(P);
         Q->counter--;
     }
 }
 
-/* Mencetak isi queue */
 void PrintQueueInfo(Queue Q) {
     if (!IsQueuekEmpty(Q)) {
         address P = Head(Q);
@@ -82,7 +74,6 @@ void PrintQueueInfo(Queue Q) {
     }
 }
 
-/* Mengecek apakah suatu info ada di queue */
 boolean isInfoKetemu(Queue Q, infotype X) {
     if (!IsQueuekEmpty(Q)) {
         address P = Head(Q);
@@ -96,7 +87,6 @@ boolean isInfoKetemu(Queue Q, infotype X) {
     return false;
 }
 
-/* Mencari alamat elemen dalam queue */
 address CariElemenQueue(Queue Q, int X) {
     if (!IsQueuekEmpty(Q)) {
         address P = Head(Q);

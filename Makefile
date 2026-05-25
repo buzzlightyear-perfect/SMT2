@@ -1,5 +1,5 @@
 # DIR = Teori/Tugas/mhslink
-DIR = strukdat-prak-main/P7/queue4cirlinklist
+DIR = strukdat-prak-main/P6/queue1noncir
 # DIR = Nyoba/monitoring
 
 SRC_C   = $(wildcard $(DIR)/*.c)
