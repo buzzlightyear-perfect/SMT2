@@ -24,6 +24,8 @@ int main() {
     CreateList(&L);
 
     do {
+
+        system("cls");
         printf("\n=== MENU DOUBLE LINKED LIST ===\n");
         printf("1. Tambah elemen di akhir (AddLast)\n");
         printf("2. Tampilkan isi list\n");
@@ -50,7 +52,9 @@ int main() {
             default:
                 printf("Pilihan tidak valid!\n");
         }
+        printf("tekan enter bos");
+        getchar();
+        getchar();
     } while (pilihan != 3);
-
     return 0;
 }
