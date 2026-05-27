@@ -5,6 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tugas prak1</title>
     <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: blue;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            font-size: 20px;
+            color: goldenrod;
+            display: flex;
+            justify-content: center;
+            margin-top: 300px;
+        }
+
+
+        .buttondiv {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 40px;
+            margin-left: 10px;
+            font-size: 20px;
+            color: blue;
+            border-radius: 12px;
+            justify-content: center;
+            align-content: center;
+            cursor: pointer;
+        }
+
+        #btn1 {
+            background-color: goldenrod;
+        }
+
+        #btn2 {
+            background-color: goldenrod;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Click button for information</p>
+    <div class="buttondiv">
+        <button id="btn1">Nama</button>
+        <button id="btn2">NIM dan Kelas</button>
+    </div>
+    
+
     <script type="text/javascript">
 
     $(document).ready(function(){
@@ -12,13 +62,9 @@
         alert("Bhaskoro Prayoga Utomo" + $("#test").text());
     });
     $("#btn2").click(function(){
-        alert("2550081109 - E" + $("#test").html());
+        alert("2550081109 - E" + $("#test").text());
     });
 });
 </script>
-</head>
-<body>
-    <button id="btn1">Nama</button>
-    <button id="btn2">NIM, Kelas</button>
 </body>
 </html>
