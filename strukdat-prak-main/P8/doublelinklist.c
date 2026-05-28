@@ -9,7 +9,6 @@ boolean ListEmpty(List L){
 void CreateList(List *L){
     L->First = Nil;
 };
-/* Membentuk sebuah list kosong */
 
 address Alokasi(infotype X) {
     address P = (address) malloc(sizeof(ElmtList));
@@ -36,8 +35,6 @@ address Search(List L, infotype X){
     }
     return Nil;
 }
-/* Menghasilkan address yang mengandung infotype X,
-   jika tidak ada menghasilkan Nil */
 
 void AddFirst(List *L, infotype X){
     address P = Alokasi(X);
@@ -51,7 +48,6 @@ void AddFirst(List *L, infotype X){
         }
     }
 };
-/* Menambahkan elemen X pada elemen pertama List */
 
 void AddLast(List *L, infotype X) {
     address P = Alokasi(X);
@@ -69,7 +65,6 @@ void AddLast(List *L, infotype X) {
     }
 }
 
-/* Menambahkan elemen X pada elemen terakhir List */
 void DelFirst(List *L, infotype *X) {
     if (!ListEmpty(*L)) {
         address P = First(*L);
@@ -81,7 +76,6 @@ void DelFirst(List *L, infotype *X) {
         Dealokasi(P);
     }
 }
-/* Menghapus elemen pertama List */
 
 void DelLast(List *L, infotype *X) {
     if (!ListEmpty(*L)) {
@@ -100,5 +94,5 @@ void DelLast(List *L, infotype *X) {
         }
     }
 }
-/* Menghapus elemen terakhir List */
+
 
