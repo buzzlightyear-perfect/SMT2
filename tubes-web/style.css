@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 header {
   background: #1a1a1a;
   color: white;
@@ -10,22 +11,71 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 nav a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
 }
+
 section {
   padding: 80px 20px;
   min-height: 60vh;
 }
+
 .hero {
   background: #f4f4f4;
   text-align: center;
 }
+
 footer {
   background: #1a1a1a;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+
+.kotakkiri {
+  padding: 100px 200px;
+  position: relative;
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  background: white;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+
+  left: -200px;
+
+  animation: masukKotak 2s ease-out forwards;
+}
+
+@keyframes masukKotak {
+  from { left: -200px; } 
+  to   { left: 50px; }     
+}
+
+.kotakkanan {
+  padding: 100px 200px;
+  position: relative;
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  background: white;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+
+ 
+  right: -200px;
+
+
+  animation: masukKanan 2s ease-out forwards;
+}
+
+@keyframes masukKanan {
+  from { right: -200px; } 
+  to   { right: 50px; }
 }
