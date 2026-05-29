@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kotak Melayang untuk Gambar</title>
+  <link rel="stylesheet" href="latihan1.css">
+</head>
+<body>
+  <h1>Demonstrasi Lightbox untuk menampilkan gambar</h1>
+  <p>
+    Dalam demo ini akan menampilkan gambar dalam sebuah kotak 
+    yang dibuat secara otomatis begitu gambar diklik.
+  </p>
+
+  <div id="shadowing" onclick="closebox()"></div>
+  <div id="box">
+    <div id="boxcontent" onclick="closebox()"></div>
+    <div id="boxtitle"></div>
+  </div>
+
+  <p>Untuk menampilkan gambar ke dalam kotak lightbox, klik thumbnail gambar di bawah ini...</p>
+
+  <img src="gallery/Chelsealogo.png" width="150" height="150"
+       onclick="openbox('gallery/Chelsealogo.png');">
+
+  <img src="gallery/cwc.jpg" width="150" height="150"
+       onclick="openbox('gallery/cwc.jpg');">
+
+  <img src="gallery/stmfrdb.png" width="150" height="150"
+       onclick="openbox('gallery/stmfrdb.png');">
+
+  <hr>
+  <p>(c) 2008 
+    <a href="http://www.xul.fr/en/" target="_parent">xul.fr</a>
+  </p>
+
+  <script src="latihan1.js"></script>
+</body>
+</html>

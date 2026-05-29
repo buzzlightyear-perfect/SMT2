@@ -1,17 +1,16 @@
+#include "doubleLinkList.h"
 #include <stdio.h>
-#include <stdlib.h>
-#include "doublelinklist.h"
 
-boolean ListEmpty(List L){
-    return (L.First == NULL);
-};
+boolean ListEmpty(List L) {
+    return (First(L) == Nil);
+}
 
-void CreateList(List *L){
-    L->First = Nil;
-};
+void CreateList(List *L) {
+    First(*L) = Nil;
+}
 
 address Alokasi(infotype X) {
-    address P = (address) malloc(sizeof(ElmtList));
+    address P = (address)malloc(sizeof(ElmtList));
     if (P != Nil) {
         Info(P) = X;
         Next(P) = Nil;
@@ -20,34 +19,30 @@ address Alokasi(infotype X) {
     return P;
 }
 
-void Dealokasi(address P){
+void Dealokasi(address P) {
     free(P);
-};
-
-
-address Search(List L, infotype X){
-    address P = L.First;
-    while (P != Nil) {
-        if (P->info == X){
-            return P;
-        }
-        P = P->next;
-    }
-    return Nil;
 }
 
-void AddFirst(List *L, infotype X){
+address Search(List L, infotype X) {
+    address P = First(L);
+    while (P != Nil && Info(P) != X) {
+        P = Next(P);
+    }
+    return P;
+}
+
+void AddFirst(List *L, infotype X) {
     address P = Alokasi(X);
     if (P != Nil) {
-        if (ListEmpty(*L)){
-            L->First = P;
+        if (ListEmpty(*L)) {
+            First(*L) = P;
         } else {
-            P->next = L->First;
-            Prev(L->First) = P;
-            L->First = P;
+            Next(P) = First(*L);
+            Prev(First(*L)) = P;
+            First(*L) = P;
         }
     }
-};
+}
 
 void AddLast(List *L, infotype X) {
     address P = Alokasi(X);
@@ -55,12 +50,12 @@ void AddLast(List *L, infotype X) {
         if (ListEmpty(*L)) {
             First(*L) = P;
         } else {
-            address Last = First(*L);
-            while (Next(Last) != Nil) {
-                Last = Next(Last);
+            address Q = First(*L);
+            while (Next(Q) != Nil) {
+                Q = Next(Q);
             }
-            Next(Last) = P;
-            Prev(P) = Last;
+            Next(Q) = P;
+            Prev(P) = Q;
         }
     }
 }
@@ -79,20 +74,28 @@ void DelFirst(List *L, infotype *X) {
 
 void DelLast(List *L, infotype *X) {
     if (!ListEmpty(*L)) {
-        address Last = First(*L);
-        if (Next(Last) == Nil) {
-            *X = Info(Last);
+        address P = First(*L);
+        if (Next(P) == Nil) {
+            *X = Info(P);
             First(*L) = Nil;
-            Dealokasi(Last);
+            Dealokasi(P);
         } else {
-            while (Next(Last) != Nil) {
-                Last = Next(Last);
+            while (Next(P) != Nil) {
+                P = Next(P);
             }
-            *X = Info(Last);
-            Next(Prev(Last)) = Nil;
-            Dealokasi(Last);
+            *X = Info(P);
+            Next(Prev(P)) = Nil;
+            Dealokasi(P);
         }
     }
 }
 
-
+void PrintList(List L) {
+    address P = First(L);
+    printf("Isi List: ");
+    while (P != Nil) {
+        printf("%d ", Info(P));
+        P = Next(P);
+    }
+    printf("\n");
+}
