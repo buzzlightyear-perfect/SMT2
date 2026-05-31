@@ -1,6 +1,11 @@
 body {
+  height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
+}
+
+main {
+  flex: 1;
 }
 
 header {
@@ -32,50 +37,14 @@ footer {
   background: #1a1a1a;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
+@import "tailwindcss";
+/* add this to copy the configuration settings from your project */
+@config "../tailwind.config.js";
 
-.kotakkiri {
-  padding: 100px 200px;
-  position: relative;
-  border: 2px solid black;
-  width: 100px;
-  height: 100px;
-  background: white;
-  text-align: center;
-  line-height: 100px;
-  font-weight: bold;
-
-  left: -200px;
-
-  animation: masukKotak 2s ease-out forwards;
-}
-
-@keyframes masukKotak {
-  from { left: -200px; } 
-  to   { left: 50px; }     
-}
-
-.kotakkanan {
-  padding: 100px 200px;
-  position: relative;
-  border: 2px solid black;
-  width: 100px;
-  height: 100px;
-  background: white;
-  text-align: center;
-  line-height: 100px;
-  font-weight: bold;
-
- 
-  right: -200px;
-
-
-  animation: masukKanan 2s ease-out forwards;
-}
-
-@keyframes masukKanan {
-  from { right: -200px; } 
-  to   { right: 50px; }
-}
