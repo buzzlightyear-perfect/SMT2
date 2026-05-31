@@ -1,5 +1,5 @@
 # DIR = Teori/Tugas/mhslink
-DIR = strukdat-prak-main/P8
+DIR = materi-strukdat/stackdll
 # DIR = Nyoba/monitoring
 
 SRC_C   = $(wildcard $(DIR)/*.c)
