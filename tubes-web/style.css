@@ -44,7 +44,4 @@ footer {
   width: 100%;
 }
 
-@import "tailwindcss";
-/* add this to copy the configuration settings from your project */
-@config "../tailwind.config.js";
 
