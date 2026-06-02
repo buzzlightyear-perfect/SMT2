@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "pendataan.h"
 #include "masukbarang.h"
 #include "keluarbarang.h"
@@ -15,6 +17,8 @@ int main() {
     int pilihan;
 
     do {
+        system("cls");
+
         printf("==============================\n");
         printf(" SISTEM PENDATAAN GUDANG\n");
         printf("==============================\n");
@@ -100,6 +104,12 @@ int main() {
             default:
                 printf("Pilihan tidak valid!\n");
         }
+
+        if(pilihan != 0) {
+            printf("\nTekan ENTER untuk kembali ke menu");
+            getchar(); getchar(); 
+        }
+
     } while(pilihan != 0);
 
     return 0;
