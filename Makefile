@@ -1,5 +1,5 @@
 # DIR = Teori/Tugas/mhslink
-DIR = tubes-strukdat
+DIR = strukdat-prak-main/P9
 # DIR = Nyoba/monitoring
 
 SRC_C   = $(wildcard $(DIR)/*.c)
