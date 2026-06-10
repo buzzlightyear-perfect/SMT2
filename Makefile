@@ -1,5 +1,5 @@
 # DIR = Teori/Tugas/mhslink
-DIR = strukdat-prak-main/P9
+DIR = materi-strukdat/tree
 # DIR = Nyoba/monitoring
 
 SRC_C   = $(wildcard $(DIR)/*.c)
@@ -58,7 +58,6 @@ run: all
 	@./$(TARGET)
 	@echo .                              .
 	@echo --------------------------------
-	@$(RM)
 
 debug_build:
 	@echo "Creating DEBUG build..."
