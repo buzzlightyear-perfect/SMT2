@@ -15,4 +15,3 @@ int main(){
     getchar();
 };
 
-123
